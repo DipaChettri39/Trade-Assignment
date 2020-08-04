@@ -21,7 +21,7 @@ public class TradeScheduler {
 	private TradeRepository tradeRepository;
 	
 
-	@Scheduled(fixedRateString="${fixedDelay}")  // Runs after every 20 seconds
+	@Scheduled(fixedRateString="${fixedDelay}") 
 	public void tradeExpirationProcess() throws ParseException {
 		SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy");  
 		Date todayDate = dateFormatter.parse(dateFormatter.format(new Date()));
